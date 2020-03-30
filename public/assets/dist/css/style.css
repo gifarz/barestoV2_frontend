@@ -3820,7 +3820,7 @@ input[type="button"].btn-block {
     content: "/"; }
 
 .breadcrumb-item + .breadcrumb-item:hover::before {
-  text-decoration: underline; }
+  text-decoration: none; }
 
 .breadcrumb-item + .breadcrumb-item:hover::before {
   text-decoration: none; }
@@ -20805,7 +20805,8 @@ icons path
     background: transparent;
     font-size: 12px; }
     .page-titles .breadcrumb li a {
-      color: #212529; }
+      color: #212529;
+      cursor: pointer; }
     .page-titles .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
       content: "\e649";
       font-family: themify;
