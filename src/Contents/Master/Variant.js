@@ -42,7 +42,7 @@ export const Variant = props => {
               <li className="breadcrumb-item">
                 <a onClick={home}>Home</a>
               </li>
-              <li className="breadcrumb-item active">Variants</li>
+              <li className="breadcrumb-item active">Variant</li>
             </ol>
           </div>
         </div>

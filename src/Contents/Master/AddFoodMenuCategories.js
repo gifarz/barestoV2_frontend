@@ -1,6 +1,6 @@
 import React from "react";
 
-export const AddIngredientCategories = props => {
+export const AddFoodMenuCategories = props => {
   return (
     <>
       {/* Content */}
@@ -8,13 +8,13 @@ export const AddIngredientCategories = props => {
         <div className="card-body">
           <form action="#">
             <div className="form-body">
-              <h5 className="card-title">Add Ingredient Category</h5>
+              <h5 className="card-title">Add Food Menu Category</h5>
               <hr />
               <form action=""></form>
               <div className="row p-t-20">
                 <div className="col-md-12">
                   <div className="form-group">
-                    <label className="control-label">Category Name</label>
+                    <label className="control-label">Category Name*</label>
                     <input
                       type="text"
                       id="category_name"

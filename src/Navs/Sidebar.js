@@ -539,12 +539,12 @@ const Sidebar = (props) => {
                     </li>
                     <li>
                       <a href onClick={supplier} className="waves-effect waves-dark">
-                        <i className="ti-angle-double-right" /> Supplier
+                        <i className="ti-angle-double-right" /> Suppliers
                       </a>
                     </li>
                     <li>
                       <a href onClick={customer} className="waves-effect waves-dark">
-                        <i className="ti-angle-double-right" /> Customer
+                        <i className="ti-angle-double-right" /> Customers
                       </a>
                     </li>
                     <li>

@@ -1,6 +1,6 @@
 import React from "react";
 
-export const AddIngredientCategories = props => {
+export const EditPaymentMethods = props => {
   return (
     <>
       {/* Content */}
@@ -8,18 +8,17 @@ export const AddIngredientCategories = props => {
         <div className="card-body">
           <form action="#">
             <div className="form-body">
-              <h5 className="card-title">Add Ingredient Category</h5>
+              <h5 className="card-title">Edit Payment Method</h5>
               <hr />
-              <form action=""></form>
               <div className="row p-t-20">
                 <div className="col-md-12">
                   <div className="form-group">
-                    <label className="control-label">Category Name</label>
+                    <label className="control-label">Payment Method Name*</label>
                     <input
                       type="text"
-                      id="category_name"
+                      id="payment_method_name"
                       className="form-control"
-                      placeholder="Category Name"
+                      placeholder="Payment Method Name"
                     />
                     <small className="form-control-feedback">
                       {/* This is inline help */}
@@ -27,13 +26,11 @@ export const AddIngredientCategories = props => {
                   </div>
                 </div>
               </div>
-              {/*/row*/}
               <div className="row">
                 <div className="col-md-12">
                   <div className="form-group">
                     <label className="control-label">Description</label>
                     <textarea
-                      type="text"
                       id="description"
                       className="form-control"
                       placeholder="Description"
@@ -47,7 +44,6 @@ export const AddIngredientCategories = props => {
             </div>
             <div className="form-actions">
               <button type="submit" className="btn btn-success">
-                {" "}
                 <i className="fa fa-check" /> Save
               </button>
               <button

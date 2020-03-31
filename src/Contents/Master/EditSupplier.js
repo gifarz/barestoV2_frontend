@@ -1,6 +1,6 @@
 import React from "react";
 
-export const EditVariant = props => {
+export const EditSupplier = props => {
   return (
     <>
       {/* Content */}
@@ -8,18 +8,17 @@ export const EditVariant = props => {
         <div className="card-body">
           <form action="#">
             <div className="form-body">
-              <h5 className="card-title">Edit Variant</h5>
+              <h5 className="card-title">Edit Supplier</h5>
               <hr />
-              <form action=""></form>
               <div className="row p-t-20">
                 <div className="col-md-12">
                   <div className="form-group">
                     <label className="control-label">Name*</label>
                     <input
                       type="text"
-                      id="name"
+                      id="unit_name"
                       className="form-control"
-                      placeholder="Name"
+                      placeholder="Unit Name"
                     />
                     <small className="form-control-feedback">
                       {/* This is inline help */}
@@ -27,16 +26,15 @@ export const EditVariant = props => {
                   </div>
                 </div>
               </div>
-              {/*/row*/}
               <div className="row">
                 <div className="col-md-12">
                   <div className="form-group">
-                    <label className="control-label">Price*</label>
+                    <label className="control-label">Contact Person*</label>
                     <input
                       type="text"
-                      id="price"
+                      id="contact_person"
                       className="form-control"
-                      placeholder="Price"
+                      placeholder="Contact Person"
                     />
                     <small className="form-control-feedback">
                       {/* This is inline help */}
@@ -44,52 +42,58 @@ export const EditVariant = props => {
                   </div>
                 </div>
               </div>
-            </div>
-            {/*/row*/}
-            <div className="row">
-              <div className="col-md-12">
-                <div className="form-group">
-                  <label className="control-label">
-                    Ingredient Consumptions*
-                  </label>
-                  <select className="select2 form-control custom-select">
-                    <option>Select</option>
-                    <option value="AK">Alaska</option>
-                    <option value="HI">Hawaii</option>
-                    <option value="CA">California</option>
-                    <option value="NV">Nevada</option>
-                    <option value="OR">Oregon</option>
-                  </select>
-                  <small className="form-control-feedback">
-                    {/* This is inline help */}
-                  </small>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-md-12">
-                <table
-                  id="zero_config"
-                  className="table table-striped table-bordered no-wrap"
-                >
-                  <thead>
-                    <tr>
-                      <th>No</th>
-                      <th>Ingredient</th>
-                      <th>Consumption</th>
-                      <th style={{ width: "30px" }}>Actions</th>
-                    </tr>
-                  </thead>
-                </table>
-              </div>
-            </div>
-            {/*/row*/}
-            <div className="row">
+              <div className="row">
                 <div className="col-md-12">
                   <div className="form-group">
-                    <label className="control-label">Description*</label>
-                    <textarea
+                    <label className="control-label">Phone*</label>
+                    <input
+                      type="number"
+                      id="phone"
+                      className="form-control"
+                      placeholder="Phone"
+                    />
+                    <small className="form-control-feedback">
+                      {/* This is inline help */}
+                    </small>
+                  </div>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-md-12">
+                  <div className="form-group">
+                    <label className="control-label">Email</label>
+                    <input
                       type="text"
+                      id="email"
+                      className="form-control"
+                      placeholder="Email"
+                    />
+                    <small className="form-control-feedback">
+                      {/* This is inline help */}
+                    </small>
+                  </div>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-md-12">
+                  <div className="form-group">
+                    <label className="control-label">Address</label>
+                    <textarea
+                      id="address"
+                      className="form-control"
+                      placeholder="Address"
+                    />
+                    <small className="form-control-feedback">
+                      {/* This is inline help */}
+                    </small>
+                  </div>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-md-12">
+                  <div className="form-group">
+                    <label className="control-label">Description</label>
+                    <textarea
                       id="description"
                       className="form-control"
                       placeholder="Description"
@@ -100,9 +104,9 @@ export const EditVariant = props => {
                   </div>
                 </div>
               </div>
+            </div>
             <div className="form-actions">
               <button type="submit" className="btn btn-success">
-                {" "}
                 <i className="fa fa-check" /> Save
               </button>
               <button
