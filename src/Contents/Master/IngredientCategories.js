@@ -19,7 +19,6 @@ export const IngredientCategories = props => {
     setAddMode(false);
   };
 
-
   const handleAdd = () => {
     setHidden(true);
     setEditMode(false);

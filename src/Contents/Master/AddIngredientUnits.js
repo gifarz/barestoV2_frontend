@@ -1,6 +1,6 @@
 import React from "react";
 
-export const EditIngredientCategories = props => {
+export const AddIngredientUnits = props => {
   return (
     <>
       {/* Content */}
@@ -8,18 +8,18 @@ export const EditIngredientCategories = props => {
         <div className="card-body">
           <form action="#">
             <div className="form-body">
-              <h5 className="card-title">Edit Ingredient Category</h5>
+              <h5 className="card-title">Add Ingredient Units</h5>
               <hr />
               <form action=""></form>
               <div className="row p-t-20">
                 <div className="col-md-12">
                   <div className="form-group">
-                    <label className="control-label">Category Name</label>
+                    <label className="control-label">Unit Name*</label>
                     <input
                       type="text"
-                      id="category_name"
+                      id="unit_name"
                       className="form-control"
-                      placeholder="Category Name"
+                      placeholder="Unit Name"
                     />
                     <small className="form-control-feedback">
                       {/* This is inline help */}
