@@ -1,8 +1,30 @@
 import React, { useState } from "react";
 import { AddIngredientCategories } from "./AddIngredientCategories";
+import { EditIngredientCategories } from "./EditIngredientCategories";
 
 export const IngredientCategories = props => {
   const [hidden, setHidden] = useState(false);
+  const [editMode, setEditMode] = useState(false);
+  const [addMode, setAddMode] = useState(false);
+
+  const handleCancel = () => {
+    setHidden(false);
+    setEditMode(false);
+    setAddMode(false);
+  };
+
+  const handleEdit = () => {
+    setHidden(true);
+    setEditMode(true);
+    setAddMode(false);
+  };
+
+
+  const handleAdd = () => {
+    setHidden(true);
+    setEditMode(false);
+    setAddMode(true);
+  };
 
   const home = () => {
     props.history.push("/");
@@ -28,7 +50,10 @@ export const IngredientCategories = props => {
       </div>
       <div className="row">
         {/* Content */}
-        <div id="ingredient_category" className={hidden ? "col-md-6" : "col-md-12"}>
+        <div
+          id="ingredient_category"
+          className={hidden ? "col-md-6" : "col-md-12"}
+        >
           <div className="card">
             <div className="card-body">
               <div className="button1">
@@ -36,9 +61,7 @@ export const IngredientCategories = props => {
                   type="button"
                   class="btn btn-info"
                   style={{ margin: "0px 10px 0px 10px" }}
-                  onClick={() => {
-                    hidden ? setHidden(false) : setHidden(true);
-                  }}
+                  onClick={handleAdd}
                 >
                   <i class="fa fa-plus"></i> Add Ingredient Category
                 </button>
@@ -79,6 +102,7 @@ export const IngredientCategories = props => {
                             <a
                               className="dropdown-item"
                               href="javascript:void(0)"
+                              onClick={handleEdit}
                             >
                               <i class="ti-pencil"></i> Edit
                             </a>
@@ -113,6 +137,7 @@ export const IngredientCategories = props => {
                             <a
                               className="dropdown-item"
                               href="javascript:void(0)"
+                              onClick={handleEdit}
                             >
                               <i class="ti-pencil"></i> Edit
                             </a>
@@ -147,312 +172,7 @@ export const IngredientCategories = props => {
                             <a
                               className="dropdown-item"
                               href="javascript:void(0)"
-                            >
-                              <i class="ti-pencil"></i> Edit
-                            </a>
-
-                            <a
-                              className="dropdown-item"
-                              href="javascript:void(0)"
-                            >
-                              <i class="ti-trash"></i> Delete
-                            </a>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Tiger Nixon</td>
-                      <td>System Architect</td>
-                      <td>Edinburgh</td>
-                      <td>61</td>
-                      <td>
-                        <div className="btn-group">
-                          <button
-                            type="button"
-                            className="btn btn-success dropdown-toggle"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                          >
-                            <i className="ti-settings"></i>
-                          </button>
-                          <div className="dropdown-menu">
-                            <a
-                              className="dropdown-item"
-                              href="javascript:void(0)"
-                            >
-                              <i class="ti-pencil"></i> Edit
-                            </a>
-
-                            <a
-                              className="dropdown-item"
-                              href="javascript:void(0)"
-                            >
-                              <i class="ti-trash"></i> Delete
-                            </a>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Tiger Nixon</td>
-                      <td>System Architect</td>
-                      <td>Edinburgh</td>
-                      <td>61</td>
-                      <td>
-                        <div className="btn-group">
-                          <button
-                            type="button"
-                            className="btn btn-success dropdown-toggle"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                          >
-                            <i className="ti-settings"></i>
-                          </button>
-                          <div className="dropdown-menu">
-                            <a
-                              className="dropdown-item"
-                              href="javascript:void(0)"
-                            >
-                              <i class="ti-pencil"></i> Edit
-                            </a>
-
-                            <a
-                              className="dropdown-item"
-                              href="javascript:void(0)"
-                            >
-                              <i class="ti-trash"></i> Delete
-                            </a>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Tiger Nixon</td>
-                      <td>System Architect</td>
-                      <td>Edinburgh</td>
-                      <td>61</td>
-                      <td>
-                        <div className="btn-group">
-                          <button
-                            type="button"
-                            className="btn btn-success dropdown-toggle"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                          >
-                            <i className="ti-settings"></i>
-                          </button>
-                          <div className="dropdown-menu">
-                            <a
-                              className="dropdown-item"
-                              href="javascript:void(0)"
-                            >
-                              <i class="ti-pencil"></i> Edit
-                            </a>
-
-                            <a
-                              className="dropdown-item"
-                              href="javascript:void(0)"
-                            >
-                              <i class="ti-trash"></i> Delete
-                            </a>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Tiger Nixon</td>
-                      <td>System Architect</td>
-                      <td>Edinburgh</td>
-                      <td>61</td>
-                      <td>
-                        <div className="btn-group">
-                          <button
-                            type="button"
-                            className="btn btn-success dropdown-toggle"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                          >
-                            <i className="ti-settings"></i>
-                          </button>
-                          <div className="dropdown-menu">
-                            <a
-                              className="dropdown-item"
-                              href="javascript:void(0)"
-                            >
-                              <i class="ti-pencil"></i> Edit
-                            </a>
-
-                            <a
-                              className="dropdown-item"
-                              href="javascript:void(0)"
-                            >
-                              <i class="ti-trash"></i> Delete
-                            </a>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Tiger Nixon</td>
-                      <td>System Architect</td>
-                      <td>Edinburgh</td>
-                      <td>61</td>
-                      <td>
-                        <div className="btn-group">
-                          <button
-                            type="button"
-                            className="btn btn-success dropdown-toggle"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                          >
-                            <i className="ti-settings"></i>
-                          </button>
-                          <div className="dropdown-menu">
-                            <a
-                              className="dropdown-item"
-                              href="javascript:void(0)"
-                            >
-                              <i class="ti-pencil"></i> Edit
-                            </a>
-
-                            <a
-                              className="dropdown-item"
-                              href="javascript:void(0)"
-                            >
-                              <i class="ti-trash"></i> Delete
-                            </a>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Tiger Nixon</td>
-                      <td>System Architect</td>
-                      <td>Edinburgh</td>
-                      <td>61</td>
-                      <td>
-                        <div className="btn-group">
-                          <button
-                            type="button"
-                            className="btn btn-success dropdown-toggle"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                          >
-                            <i className="ti-settings"></i>
-                          </button>
-                          <div className="dropdown-menu">
-                            <a
-                              className="dropdown-item"
-                              href="javascript:void(0)"
-                            >
-                              <i class="ti-pencil"></i> Edit
-                            </a>
-
-                            <a
-                              className="dropdown-item"
-                              href="javascript:void(0)"
-                            >
-                              <i class="ti-trash"></i> Delete
-                            </a>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Tiger Nixon</td>
-                      <td>System Architect</td>
-                      <td>Edinburgh</td>
-                      <td>61</td>
-                      <td>
-                        <div className="btn-group">
-                          <button
-                            type="button"
-                            className="btn btn-success dropdown-toggle"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                          >
-                            <i className="ti-settings"></i>
-                          </button>
-                          <div className="dropdown-menu">
-                            <a
-                              className="dropdown-item"
-                              href="javascript:void(0)"
-                            >
-                              <i class="ti-pencil"></i> Edit
-                            </a>
-
-                            <a
-                              className="dropdown-item"
-                              href="javascript:void(0)"
-                            >
-                              <i class="ti-trash"></i> Delete
-                            </a>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Tiger Nixon</td>
-                      <td>System Architect</td>
-                      <td>Edinburgh</td>
-                      <td>61</td>
-                      <td>
-                        <div className="btn-group">
-                          <button
-                            type="button"
-                            className="btn btn-success dropdown-toggle"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                          >
-                            <i className="ti-settings"></i>
-                          </button>
-                          <div className="dropdown-menu">
-                            <a
-                              className="dropdown-item"
-                              href="javascript:void(0)"
-                            >
-                              <i class="ti-pencil"></i> Edit
-                            </a>
-
-                            <a
-                              className="dropdown-item"
-                              href="javascript:void(0)"
-                            >
-                              <i class="ti-trash"></i> Delete
-                            </a>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Tiger Nixon</td>
-                      <td>System Architect</td>
-                      <td>Edinburgh</td>
-                      <td>61</td>
-                      <td>
-                        <div className="btn-group">
-                          <button
-                            type="button"
-                            className="btn btn-success dropdown-toggle"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                          >
-                            <i className="ti-settings"></i>
-                          </button>
-                          <div className="dropdown-menu">
-                            <a
-                              className="dropdown-item"
-                              href="javascript:void(0)"
+                              onClick={handleEdit}
                             >
                               <i class="ti-pencil"></i> Edit
                             </a>
@@ -474,12 +194,14 @@ export const IngredientCategories = props => {
           </div>
         </div>
         {hidden ? (
-          <div id="addedit_ingredient_category" className="col-md-6">
-            <AddIngredientCategories hidden={hidden}/>
+          <div className="col-md-6">
+            {editMode ? (
+              <EditIngredientCategories handleCancel={handleCancel} />
+            ) : (
+              <AddIngredientCategories handleCancel={handleCancel} />
+            )}
           </div>
-        ) : (
-          ""
-        )}
+        ) : null}
       </div>
     </>
   );

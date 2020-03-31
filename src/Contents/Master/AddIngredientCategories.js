@@ -22,7 +22,7 @@ export const AddIngredientCategories = props => {
                       placeholder="Category Name"
                     />
                     <small className="form-control-feedback">
-                      This is inline help
+                      {/* This is inline help */}
                     </small>
                   </div>
                 </div>
@@ -39,7 +39,7 @@ export const AddIngredientCategories = props => {
                       placeholder="Description"
                     />
                     <small className="form-control-feedback">
-                      This is inline help
+                      {/* This is inline help */}
                     </small>
                   </div>
                 </div>
@@ -50,7 +50,11 @@ export const AddIngredientCategories = props => {
                 {" "}
                 <i className="fa fa-check" /> Save
               </button>
-              <button type="button" className="btn btn-inverse">
+              <button
+                type="button"
+                className="btn btn-inverse"
+                onClick={props.handleCancel}
+              >
                 Cancel
               </button>
             </div>
