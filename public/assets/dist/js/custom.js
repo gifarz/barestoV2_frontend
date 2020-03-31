@@ -202,4 +202,10 @@ $(function () {
 
     //For Datatables
     $('#zero_config').DataTable();  
+    $('#zero_config2').DataTable();  
+    $('#zero_config3').DataTable();  
+    $('#zero_config4').DataTable();  
+    $('#zero_config5').DataTable();  
+    $('#zero_config6').DataTable();  
+    $('#zero_config7').DataTable();  
 });

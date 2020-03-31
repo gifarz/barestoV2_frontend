@@ -20,6 +20,7 @@ import { SignUp } from './Contents/Auth/SignUp';
 import { SupplierDuePayments } from './Contents/SupplierDuePayments/SupplierDuePayments';
 import { CustomerDueReceive } from './Contents/CustomerDueReceive/CustomerDueReceive';
 import { SendSMS } from './Contents/SendSMS/SendSMS';
+import { TestSMS } from './Contents/SendSMS/TestSMS';
 import { Attendance } from './Contents/Attendance/Attendance';
 
 //Reports
@@ -126,6 +127,7 @@ const routing = (
           <Route path="/sales" component={Sales} />
           <Route path="/purchase" component={Purchase} />
           <Route path="/sendsms" component={SendSMS} />
+          <Route path="/testsms" component={TestSMS} />
           <Route path="/attendance" component={Attendance} />
 
           <Route exact path="/" component={App} />

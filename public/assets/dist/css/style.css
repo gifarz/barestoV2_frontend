@@ -30,6 +30,7 @@ File: scss
 @import url(../../../assets/icons/material-design-iconic-font/css/materialdesignicons.min.css);
 @import url(https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700);
 @import url(https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700);
+
 .skin-default .topbar {
   background: #4F5467; }
   .skin-default .topbar .top-navbar .navbar-header .navbar-brand .dark-logo {
