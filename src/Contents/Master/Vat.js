@@ -51,7 +51,7 @@ export const Vat = props => {
         {/* Content */}
         <div
           id="ingredient_category"
-          className={hidden ? "col-md-6" : "col-md-12"}
+          className={hidden ? "col-md-7" : "col-md-12"}
         >
           <div className="card">
             <div className="card-body">
@@ -189,7 +189,7 @@ export const Vat = props => {
           </div>
         </div>
         {hidden ? (
-          <div className="col-md-6">
+          <div className="col-md-5">
             {editMode ? (
               <EditVat handleCancel={handleCancel} />
             ) : (
