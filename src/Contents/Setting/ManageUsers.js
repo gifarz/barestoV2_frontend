@@ -33,13 +33,13 @@ export const ManageUsers = (props) => {
               <div className="button1">
                 <button
                   type="button"
-                  class="btn btn-info"
+                  className="btn btn-info"
                   style={{ margin: "0px 10px 0px 10px" }}
                   onClick={() => {
                     hidden ? setHidden(false) : setHidden(true);
                   }}
                 >
-                  <i class="fa fa-plus"></i> Add User
+                  <i className="fa fa-plus"></i> Add User
                 </button>
               </div>
               <br />
@@ -81,16 +81,16 @@ export const ManageUsers = (props) => {
                           <div className="dropdown-menu">
                             <a
                               className="dropdown-item"
-                              href="javascript:void(0)"
+                              href
                             >
-                              <i class="ti-pencil"></i> Edit
+                              <i className="ti-pencil"></i> Edit
                             </a>
 
                             <a
                               className="dropdown-item"
-                              href="javascript:void(0)"
+                              href
                             >
-                              <i class="ti-trash"></i> Delete
+                              <i className="ti-trash"></i> Delete
                             </a>
                           </div>
                         </div>

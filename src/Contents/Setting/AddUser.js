@@ -25,18 +25,51 @@ export const AddUser = (props) => {
                             Will Login ? :
                             <div>
                                 <div className="radio-user">
-                                    <label><input type="radio" name="radio"/>Yes<span className="checkmark"></span></label>
+                                    <label><input type="radio" name="radio" id="login_yes"/>Yes<span className="checkmark"></span></label>
                                 </div>
                                 <div className="radio-user">
-                                    <label><input type="radio" name="radio" checked="checked"/>No<span className="checkmark"></span></label>
+                                    <label><input type="radio" name="radio" id="login_no"/>No<span className="checkmark"></span></label>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    {/* <LoginYess checked/> */}
+                    <div id="form_input_user">
+                        <div className="form-row">
+                            <div className="form-group col-md-6">
+                                Password :<input type="text" className="form-control"/>
+                            </div>
+                            <div className="form-group col-md-6">
+                                Confirm Password :<input type="text" className="form-control"/>
+                            </div>
+                        </div>
+                    </div>
+
                     <button className="btn btn-secondary">Submit</button>
                 </div>
             </div>
         </div>
     </>
+    )
+}
+
+export const LoginYess = (props) =>{
+    return (
+        <>
+        {props.checked ?
+            <div id="form_input_user">
+                <div className="form-row">
+                    <div className="form-group col-md-6">
+                        Password :<input type="text" className="form-control"/>
+                    </div>
+                    <div className="form-group col-md-6">
+                        Confirm Password :<input type="text" className="form-control"/>
+                    </div>
+                </div>
+            </div>
+            :
+            ""
+        }
+        </>
     )
 }
