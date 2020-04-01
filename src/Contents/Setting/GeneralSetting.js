@@ -21,7 +21,7 @@ export const GeneralSetting = (props) => {
                     </ol>
                 </div>
             </div>
-      </div>
+        </div>
       <div className="row">
             <div className="card w-100" style={{height: "100vh"}}>
                 <div className="card-body">
