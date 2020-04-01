@@ -47,12 +47,9 @@ export const Ingredients = props => {
           </div>
         </div>
       </div>
+      {/* Content */}
       <div className="row">
-        {/* Content */}
-        <div
-          id="ingredient"
-          className={hidden ? "col-md-7" : "col-md-12"}
-        >
+        <div id="ingredient" className={hidden ? "col-md-7" : "col-md-12"}>
           <div className="card">
             <div className="card-body">
               <div className="button1">
