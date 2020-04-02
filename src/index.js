@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import * as serviceWorker from "./serviceWorker";
-import App from "./App";
 import Header from "./Navs/Header";
 import Sidebar from "./Navs/Sidebar";
 import Footer from "./Navs/Footer";
@@ -142,7 +141,7 @@ const routing = (
           <Route path="/purchase" component={Purchase} />
           <Route path="/attendance" component={Attendance} />
 
-          <Route exact path="/" component={App} />
+          <Route exact path="/" component={Dashboard} />
         </Switch>
       </div>
     </div>

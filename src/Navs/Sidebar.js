@@ -214,7 +214,7 @@ const Sidebar = (props) => {
                 <li className="user-pro">
                   <a
                     className="has-arrow waves-effect waves-dark"
-                    href="/"
+                    href="javascript:void(0)"
                     aria-expanded="false"
                   >
                     <img
@@ -226,27 +226,27 @@ const Sidebar = (props) => {
                   </a>
                   <ul aria-expanded="false" className="collapse">
                     <li>
-                      <a href="/">
+                      <a href="javascript:void(0)">
                         <i className="ti-user" /> My Profile
                       </a>
                     </li>
                     <li>
-                      <a href="/">
+                      <a href="javascript:void(0)">
                         <i className="ti-wallet" /> My Balance
                       </a>
                     </li>
                     <li>
-                      <a href="/">
+                      <a href="javascript:void(0)">
                         <i className="ti-email" /> Inbox
                       </a>
                     </li>
                     <li>
-                      <a href="/">
+                      <a href="javascript:void(0)">
                         <i className="ti-settings" /> Account Settings
                       </a>
                     </li>
                     <li>
-                      <a href="/">
+                      <a href="javascript:void(0)">
                         <i className="fa fa-power-off" /> Logout
                       </a>
                     </li>
@@ -539,12 +539,12 @@ const Sidebar = (props) => {
                     </li>
                     <li>
                       <a href onClick={supplier} className="waves-effect waves-dark">
-                        <i className="ti-angle-double-right" /> Supplier
+                        <i className="ti-angle-double-right" /> Suppliers
                       </a>
                     </li>
                     <li>
                       <a href onClick={customer} className="waves-effect waves-dark">
-                        <i className="ti-angle-double-right" /> Customer
+                        <i className="ti-angle-double-right" /> Customers
                       </a>
                     </li>
                     <li>

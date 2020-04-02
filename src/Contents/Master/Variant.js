@@ -42,7 +42,7 @@ export const Variant = props => {
               <li className="breadcrumb-item">
                 <a onClick={home}>Home</a>
               </li>
-              <li className="breadcrumb-item active">Variants</li>
+              <li className="breadcrumb-item active">Variant</li>
             </ol>
           </div>
         </div>
@@ -51,7 +51,7 @@ export const Variant = props => {
         {/* Content */}
         <div
           id="ingredient_category"
-          className={hidden ? "col-md-6" : "col-md-12"}
+          className={hidden ? "col-md-7" : "col-md-12"}
         >
           <div className="card">
             <div className="card-body">
@@ -201,7 +201,7 @@ export const Variant = props => {
           </div>
         </div>
         {hidden ? (
-          <div className="col-md-6">
+          <div className="col-md-5">
             {editMode ? (
               <EditVariant handleCancel={handleCancel} />
             ) : (

@@ -32,7 +32,7 @@ export const AddIngredientUnits = props => {
                 <div className="col-md-12">
                   <div className="form-group">
                     <label className="control-label">Description</label>
-                    <input
+                    <textarea
                       type="text"
                       id="description"
                       className="form-control"
