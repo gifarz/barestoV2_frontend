@@ -40,7 +40,7 @@ export const Ingredients = props => {
           <div className="d-flex justify-content-end align-items-center">
             <ol className="breadcrumb">
               <li className="breadcrumb-item">
-                <a onClick={home}>Home</a>
+                <a onClick={home}>Dashboard</a>
               </li>
               <li className="breadcrumb-item active">Ingredients</li>
             </ol>
@@ -49,7 +49,7 @@ export const Ingredients = props => {
       </div>
       {/* Content */}
       <div className="row">
-        <div id="ingredient" className={hidden ? "col-md-7" : "col-md-12"}>
+        <div id="ingredient" className={hidden ? "col-md-6" : "col-md-12"}>
           <div className="card">
             <div className="card-body">
               <div className="button1">
@@ -202,7 +202,7 @@ export const Ingredients = props => {
           </div>
         </div>
         {hidden ? (
-          <div className="col-md-5">
+          <div className="col-md-6">
             {editMode ? (
               <EditIngredients handleCancel={handleCancel} />
             ) : (

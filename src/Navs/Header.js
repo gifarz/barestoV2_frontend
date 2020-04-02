@@ -1,10 +1,10 @@
 import React from "react";
-import {withRouter} from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 const Header = props => {
   const home = () => {
-    props.history.push("/")
-  }
+    props.history.push("/");
+  };
 
   return (
     <div>
@@ -14,7 +14,11 @@ const Header = props => {
           {/* Logo */}
           {/* ============================================================== */}
           <div className="navbar-header">
-            <a className="navbar-brand" onClick={home} style={{cursor:"pointer",color: "rgba(255, 255, 255, 0.8)"}}>
+            <a
+              className="navbar-brand"
+              onClick={home}
+              style={{ cursor: "pointer", color: "rgba(255, 255, 255, 0.8)" }}
+            >
               {/* Logo icon */}
               <b>
                 <img

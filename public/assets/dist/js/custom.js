@@ -222,9 +222,6 @@ $(function() {
       .html(fileName);
   });
 
-  //For Datatables
-  $("#zero_config").DataTable();
-
   // Switchery
   var elems = Array.prototype.slice.call(
     document.querySelectorAll(".js-switch")
@@ -329,23 +326,5 @@ $(function() {
     minimumInputLength: 1
     //templateResult: formatRepo, // omitted for brevity, see the source of this page
     //templateSelection: formatRepoSelection // omitted for brevity, see the source of this page
-  });
-
-  $("#table_ingredient_alert").DataTable({
-    scrollY: "250px",
-    fixedHeader: true,
-    scrollCollapse: true,
-    paging: false,
-    searching: false,
-    info: false
-  });
-
-  $("#table_top_menu").DataTable({
-    scrollY: "250px",
-    fixedHeader: true,
-    scrollCollapse: true,
-    paging: false,
-    searching: false,
-    info: false
   });
 });
