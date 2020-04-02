@@ -366,4 +366,5 @@ $(function() {
     searching: false,
     info: false
   });
+
 });

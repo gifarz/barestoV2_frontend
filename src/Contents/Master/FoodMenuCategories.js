@@ -40,7 +40,7 @@ export const FoodMenuCategories = props => {
           <div className="d-flex justify-content-end align-items-center">
             <ol className="breadcrumb">
               <li className="breadcrumb-item">
-                <a onClick={home}>Home</a>
+                <a onClick={home}>Dashboard</a>
               </li>
               <li className="breadcrumb-item active">Food Menu Categories</li>
             </ol>

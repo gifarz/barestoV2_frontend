@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AddIngredientCategories } from "./AddIngredientCategories";
 import { EditIngredientCategories } from "./EditIngredientCategories";
 
@@ -6,6 +6,14 @@ export const IngredientCategories = props => {
   const [hidden, setHidden] = useState(false);
   const [editMode, setEditMode] = useState(false);
   const [addMode, setAddMode] = useState(false);
+
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "assets/dist/js/content.js";
+    script.async = true;
+
+    document.body.appendChild(script);
+  }, []);
 
   const handleCancel = () => {
     setHidden(false);
@@ -40,7 +48,7 @@ export const IngredientCategories = props => {
           <div className="d-flex justify-content-end align-items-center">
             <ol className="breadcrumb">
               <li className="breadcrumb-item">
-                <a onClick={home}>Home</a>
+                <a onClick={home}>Dashboard</a>
               </li>
               <li className="breadcrumb-item active">Ingredient Categories</li>
             </ol>

@@ -11,7 +11,7 @@ import { Sales } from './Contents/Sales/Sales';
 import { Discount } from './Contents/Discount/Discount';
 import { Purchase } from './Contents/Purchase/Purchase';
 import { Expense } from './Contents/Expense/Expense';
-import { InventoryProduct } from './Contents/InventoryProduct/InventoryProduct';
+import { Inventory } from './Contents/InventoryProduct/Inventory';
 import { InventoryAdjustment } from './Contents/InventoryProduct/InventoryAdjustment';
 import { Waste } from './Contents/Waste/Waste';
 import { SignIn } from './Contents/Auth/SignIn';
@@ -82,7 +82,7 @@ const routing = (
           <Route path="/signup" component={SignUp} />
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/expense" component={Expense} />
-          <Route path="/inventory" component={InventoryProduct} />
+          <Route path="/inventory" component={Inventory} />
           <Route path="/inventoryadjustment" component={InventoryAdjustment} />
           <Route path="/waste" component={Waste} />
           <Route path="/discount" component={Discount} />

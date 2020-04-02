@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 export const Dashboard = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "assets/dist/js/content.js";
+    script.async = true;
+
+    document.body.appendChild(script);
+  }, []);
+
   return (
     <>
       {/* Page Title & Bread Crumb */}
@@ -142,7 +150,9 @@ export const Dashboard = () => {
         <div className="col-lg-12">
           <div className="card">
             <div className="card-body">
-              <h5 className="card-title m-b-40">Sales by Type Order (This Month)</h5>
+              <h5 className="card-title m-b-40">
+                Sales by Type Order (This Month)
+              </h5>
               <div className="row">
                 <div className="col-lg-4">
                   <div className="card">
@@ -187,79 +197,83 @@ export const Dashboard = () => {
               <h5 className="card-title m-b-40">
                 Top 10 Food Menus (This Month)
               </h5>
-              <table id="table_top_menu" className="table table-striped table-bordered no-wrap">
-                  <thead>
-                    <tr>
-                      <th>Food Name</th>
-                      <th>Count</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>System Architect</td>
-                      <td>20</td>
-                    </tr>
-                    <tr>
-                      <td>System Architect</td>
-                      <td>20</td>
-                    </tr>
-                    <tr>
-                      <td>System Architect</td>
-                      <td>20</td>
-                    </tr>
-                    <tr>
-                      <td>System Architect</td>
-                      <td>20</td>
-                    </tr>
-                    <tr>
-                      <td>System Architect</td>
-                      <td>20</td>
-                    </tr>
-                    <tr>
-                      <td>System Architect</td>
-                      <td>20</td>
-                    </tr>
-                    <tr>
-                      <td>System Architect</td>
-                      <td>20</td>
-                    </tr>
-                    <tr>
-                      <td>System Architect</td>
-                      <td>20</td>
-                    </tr>
-                    <tr>
-                      <td>System Architect</td>
-                      <td>20</td>
-                    </tr>
-                    <tr>
-                      <td>System Architect</td>
-                      <td>20</td>
-                    </tr>
-                    <tr>
-                      <td>System Architect</td>
-                      <td>20</td>
-                    </tr>
-                    <tr>
-                      <td>System Architect</td>
-                      <td>20</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <br/>
+              <table
+                id="table_top_menu"
+                className="table table-striped table-bordered no-wrap"
+              >
+                <thead>
+                  <tr>
+                    <th>Food Name</th>
+                    <th>Count</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>System Architect</td>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <td>System Architect</td>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <td>System Architect</td>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <td>System Architect</td>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <td>System Architect</td>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <td>System Architect</td>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <td>System Architect</td>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <td>System Architect</td>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <td>System Architect</td>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <td>System Architect</td>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <td>System Architect</td>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <td>System Architect</td>
+                    <td>20</td>
+                  </tr>
+                </tbody>
+              </table>
+              <br />
             </div>
           </div>
         </div>
         {/* Column */}
         <div className="col-lg-6">
           <div className="card">
-            <div
-              className="card-body"
-            >
+            <div className="card-body">
               <h5 className="card-title m-b-40">
                 Ingredients in Alert/Low Stock
               </h5>
               <div className="table-responsive">
-                <table id="table_ingredient_alert" className="table table-striped table-bordered no-wrap">
+                <table
+                  id="table_ingredient_alert"
+                  className="table table-striped table-bordered no-wrap"
+                >
                   <thead>
                     <tr>
                       <th>Ingredient Name</th>
@@ -317,7 +331,7 @@ export const Dashboard = () => {
                     </tr>
                   </tbody>
                 </table>
-                <br/>
+                <br />
               </div>
             </div>
           </div>
@@ -328,7 +342,9 @@ export const Dashboard = () => {
         <div className="col-lg-12">
           <div className="card">
             <div className="card-body">
-              <h5 className="card-title m-b-40">Operational Comparison (This Month)</h5>
+              <h5 className="card-title m-b-40">
+                Operational Comparison (This Month)
+              </h5>
               <div className="row">
                 <div className="col-md-12">
                   <div id="morris-area-chart" style={{ height: 300 }} />
