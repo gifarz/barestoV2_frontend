@@ -22,6 +22,16 @@ export const Expense = (props) => {
                 </div>
             </div>
         </div>
+
+        <div className="row">
+            <div className="card w-100" style={{height: "100vh"}}>
+                <div className="card-body">
+                    <div className="form-row">
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </>       
     )
 }

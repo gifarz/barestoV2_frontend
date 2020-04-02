@@ -22,6 +22,22 @@ export const ChangePassword = (props) => {
                 </div>
             </div>
         </div>
+
+        <div className="row">
+            <div className="card w-100" style={{height: "100vh"}}>
+                <div className="card-body">
+                    <div className="form-row">
+                        <div className="form-group col-md-6">
+                            Old Password :<input type="text" className="form-control" placeholder="Old Password"/>
+                        </div>
+                        <div className="form-group col-md-6">
+                            New Password :<input type="text" className="form-control" placeholder="New Password"/>
+                        </div>
+                    </div>
+                    <button className="btn btn-info">Submit</button>
+                </div>
+            </div>
+        </div>
     </>
     )
 }

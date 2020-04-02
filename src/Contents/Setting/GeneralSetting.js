@@ -32,11 +32,11 @@ export const GeneralSetting = (props) => {
                         <div className="form-group col-md-4">
                             Country Time Zone
                             <select name="user" id="user" className="form-control">
-                                <option value="user">Employee</option>
+                                <option value="user">Choose Time Zone</option>
                             </select>
                         </div>
                         <div className="form-group col-md-4">
-                            Currency :<input type="date" className="form-control"/>
+                            Currency :<input type="text" className="form-control"/>
                         </div>
                     </div>
                     <button className="btn btn-secondary">Submit</button>

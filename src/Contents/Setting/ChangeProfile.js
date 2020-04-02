@@ -22,6 +22,25 @@ export const ChangeProfile = (props) => {
                 </div>
             </div>
         </div>
+
+        <div className="row">
+            <div className="card w-100" style={{height: "100vh"}}>
+                <div className="card-body">
+                    <div className="form-row">
+                        <div className="form-group col-md-4">
+                            Name :<input type="text" className="form-control" placeholder="Name"/>
+                        </div>
+                        <div className="form-group col-md-4">
+                            Email Address :<input type="email" className="form-control" placeholder="Email Address"/>
+                        </div>
+                        <div className="form-group col-md-4">
+                            Phone :<input type="number" className="form-control" placeholder="Phone Number"/>
+                        </div>
+                    </div>
+                    <button className="btn btn-info">Submit</button>
+                </div>
+            </div>
+        </div>
     </>
     )
 }

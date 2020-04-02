@@ -35,10 +35,10 @@ export const SmsSetting = (props) => {
                     <hr/>
                     <div className="form-row">
                         <div className="form-group col-md-4">
-                            Email Address :<input type="email" placeholder="insert email"/>
+                            Email Address :<input type="email" placeholder="insert email" className="form-control"/>
                         </div>
                         <div className="form-group col-md-4">
-                            Password :<input type="password" placeholder="insert password"/>
+                            Password :<input type="password" placeholder="insert password" className="form-control"/>
                         </div>
                     </div>
                     <div>

@@ -52,24 +52,3 @@ export const AddUser = (props) => {
     </>
     )
 }
-
-export const LoginYess = (props) =>{
-    return (
-        <>
-        {props.checked ?
-            <div id="form_input_user">
-                <div className="form-row">
-                    <div className="form-group col-md-6">
-                        Password :<input type="text" className="form-control"/>
-                    </div>
-                    <div className="form-group col-md-6">
-                        Confirm Password :<input type="text" className="form-control"/>
-                    </div>
-                </div>
-            </div>
-            :
-            ""
-        }
-        </>
-    )
-}

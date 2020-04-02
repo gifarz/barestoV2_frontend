@@ -19,9 +19,15 @@ import { SignIn } from './Contents/Auth/SignIn';
 import { SignUp } from './Contents/Auth/SignUp';
 import { SupplierDuePayments } from './Contents/SupplierDuePayments/SupplierDuePayments';
 import { CustomerDueReceive } from './Contents/CustomerDueReceive/CustomerDueReceive';
+import { Attendance } from './Contents/Attendance/Attendance';
+
+//SMS
 import { SendSMS } from './Contents/SendSMS/SendSMS';
 import { TestSMS } from './Contents/SendSMS/TestSMS';
-import { Attendance } from './Contents/Attendance/Attendance';
+import { CheckBalance } from './Contents/SendSMS/CheckBalance';
+import { CustomerWhoAnniversary } from './Contents/SendSMS/CustomerWhoAnniversary';
+import { CustomerWhoBirthday } from './Contents/SendSMS/CustomerWhoBirthday';
+import { SmsAllCustomer } from './Contents/SendSMS/SmsAllCustomer';
 
 //Reports
 import { ConsumptionReport } from "./Contents/Reports/ConsumptionReport";
@@ -122,12 +128,18 @@ const routing = (
           <Route path="/manageusers" component={ManageUsers} />
           <Route path="/smssetting" component={SmsSetting} />
 
+          <Route path="/sendsms" component={SendSMS} />
+          <Route path="/testsms" component={TestSMS} />
+          <Route path="/checkbalance" component={CheckBalance} />
+          <Route path="/smsallcustomer" component={SmsAllCustomer} />
+          <Route path="/customerwhobirthday" component={CustomerWhoBirthday} />
+          <Route path="/customerwhoanniversary" component={CustomerWhoAnniversary} />
+
+
           <Route path="/supplierduepayments" component={SupplierDuePayments} /> 
           <Route path="/customerduereceive" component={CustomerDueReceive} /> 
           <Route path="/sales" component={Sales} />
           <Route path="/purchase" component={Purchase} />
-          <Route path="/sendsms" component={SendSMS} />
-          <Route path="/testsms" component={TestSMS} />
           <Route path="/attendance" component={Attendance} />
 
           <Route exact path="/" component={App} />
