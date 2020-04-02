@@ -70,16 +70,17 @@ import { Logout } from "./Contents/Setting/Logout";
 import { GeneralSetting } from "./Contents/Setting/GeneralSetting";
 import { ManageUsers } from "./Contents/Setting/ManageUsers";
 import { SmsSetting } from "./Contents/Setting/SmsSetting";
+import { RestaurantSetting } from "./Contents/Setting/RestaurantSetting";
 
 const routing = (
   <Router>
+    <Route path="/signin" component={SignIn} />
+    <Route path="/signup" component={SignUp} />
     <Header />
     <Sidebar />
     <div className="page-wrapper">
       <div className="container-fluid">
         <Switch>
-          <Route path="/signin" component={SignIn} />
-          <Route path="/signup" component={SignUp} />
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/expense" component={Expense} />
           <Route path="/inventory" component={Inventory} />
@@ -126,6 +127,7 @@ const routing = (
           <Route path="/logout" component={Logout} />
           <Route path="/manageusers" component={ManageUsers} />
           <Route path="/smssetting" component={SmsSetting} />
+          <Route path="/restaurantsetting" component={RestaurantSetting} />
 
           <Route path="/sendsms" component={SendSMS} />
           <Route path="/testsms" component={TestSMS} />
@@ -133,7 +135,6 @@ const routing = (
           <Route path="/smsallcustomer" component={SmsAllCustomer} />
           <Route path="/customerwhobirthday" component={CustomerWhoBirthday} />
           <Route path="/customerwhoanniversary" component={CustomerWhoAnniversary} />
-
 
           <Route path="/supplierduepayments" component={SupplierDuePayments} /> 
           <Route path="/customerduereceive" component={CustomerDueReceive} /> 

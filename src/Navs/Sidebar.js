@@ -191,16 +191,16 @@ const Sidebar = (props) => {
     props.history.push("/generalsetting")
   }
 
-  const logout = () => {
-    props.history.push("/logout")
-  }
-
   const manageUsers = () => {
     props.history.push("/manageusers")
   }
 
   const smsSetting = () => {
     props.history.push("/smssetting")
+  }
+
+  const restaurantSetting = () => {
+    props.history.push("/restaurantsetting")
   }
 
     return (
@@ -213,8 +213,8 @@ const Sidebar = (props) => {
               <ul id="sidebarnav">
                 <li className="user-pro">
                   <a
-                    className="has-arrow waves-effect waves-dark"
-                    href="javascript:void(0)"
+                    className="waves-effect waves-dark"
+                    href
                     aria-expanded="false"
                   >
                     <img
@@ -224,7 +224,7 @@ const Sidebar = (props) => {
                     />
                     <span className="hide-menu">Mark Jeckson</span>
                   </a>
-                  <ul aria-expanded="false" className="collapse">
+                  {/* <ul aria-expanded="false" className="collapse">
                     <li>
                       <a href="javascript:void(0)">
                         <i className="ti-user" /> My Profile
@@ -250,7 +250,7 @@ const Sidebar = (props) => {
                         <i className="fa fa-power-off" /> Logout
                       </a>
                     </li>
-                  </ul>
+                  </ul> */}
                 </li>
                 
                 <li className="nav-small-cap">--- MAIN NAVIGATION</li>
@@ -600,8 +600,8 @@ const Sidebar = (props) => {
                       </a>
                     </li>
                     <li>
-                      <a href onClick={logout} className="waves-effect waves-dark">
-                        <i className="ti-angle-double-right" /> Logout
+                      <a href onClick={restaurantSetting} className="waves-effect waves-dark">
+                        <i className="ti-angle-double-right" /> Restaurant Setting
                       </a>
                     </li>
                   </ul>
