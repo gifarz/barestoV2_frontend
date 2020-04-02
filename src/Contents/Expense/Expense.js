@@ -1,9 +1,38 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {AddExpense} from './AddExpense';
+import {EditExpense} from './EditExpense';
 
 export const Expense = (props) => {
 
     const [hidden, setHidden] = useState(false);
+    const [editMode, setEditMode] = useState(false);
+    const [addMode, setAddMode] = useState(false);
+  
+    useEffect(() => {
+      const script = document.createElement("script");
+      script.src = "assets/dist/js/content.js";
+      script.async = true;
+  
+      document.body.appendChild(script);
+    }, []);
+  
+    const handleCancel = () => {
+      setHidden(false);
+      setEditMode(false);
+      setAddMode(false);
+    };
+  
+    const handleEdit = () => {
+      setHidden(true);
+      setEditMode(true);
+      setAddMode(false);
+    };
+  
+    const handleAdd = () => {
+      setHidden(true);
+      setEditMode(false);
+      setAddMode(true);
+    };
 
     const home = () => {
         props.history.push("/")
@@ -27,7 +56,7 @@ export const Expense = (props) => {
         </div>
 
         <div className="row">
-            <div id="supplierduepayment" className={hidden ? "col-md-6" : "col-md-12"}>
+            <div className={hidden ? "col-md-6" : "col-md-12"}>
                 <div className="card">
                     <div className="card-body">
                         <div className="button1">
@@ -35,9 +64,7 @@ export const Expense = (props) => {
                             type="button"
                             class="btn btn-info"
                             style={{ margin: "0px 10px 0px 10px" }}
-                            onClick={() => {
-                                hidden ? setHidden(false) : setHidden(true);
-                            }}
+                            onClick={handleAdd}
                             >
                             <i class="fa fa-plus"></i> Add Expense
                             </button>
@@ -84,6 +111,7 @@ export const Expense = (props) => {
                                         <a
                                         className="dropdown-item"
                                         href="javascript:void(0)"
+                                        onClick={handleEdit}
                                         >
                                         <i class="ti-pencil"></i> Edit
                                         </a>
@@ -105,8 +133,12 @@ export const Expense = (props) => {
             </div>
         </div>
         {hidden ? (
-          <div id="add_supplier" className="col-md-6">
-            <AddExpense hidden={hidden}/>
+          <div className="col-md-6">
+              {editMode ?
+                <EditExpense handleCancel={handleCancel}/>
+                :
+                <AddExpense handleCancel={handleCancel}/>
+              }
           </div>
         ) : (
           ""

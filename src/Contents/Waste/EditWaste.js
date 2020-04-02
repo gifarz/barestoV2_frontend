@@ -1,13 +1,13 @@
 import React from 'react';
 
-export const AddWaste = (props) => {
+export const EditWaste = (props) => {
 
     return (
     <>
       <div className="row">
             <div className="card w-100">
                 <div className="card-body">
-                    <h5 className="card-title">Add Waste</h5>
+                    <h5 className="card-title">Edit Waste</h5>
                     <hr/>
                     <div className="form-row">
                         <div className="form-group col-md-6">

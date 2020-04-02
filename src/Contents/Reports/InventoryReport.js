@@ -49,10 +49,10 @@ export const InventoryReport = (props) => {
                                     </select>
                                 </div>
                                 <div className="form-group col-md-2">
-                                    <button className="btn btn-secondary">Submit</button>
+                                    <button className="btn btn-info">Submit</button>
                                 </div>
                                 <div className="form-group col-md-2">
-                                    <button onClick={alertInventory} className="btn btn-secondary">Ingredient In Alert</button>
+                                    <button onClick={alertInventory} className="btn btn-danger">Ingredient In Alert</button>
                                 </div>
                                 <div className="form-group col-md-2">
                                     <h6>Stock Value: Rp.</h6>

@@ -26,7 +26,7 @@ export const SmsSetting = (props) => {
             </div>
         </div>
         <div className="row">
-            <div className="card w-100" style={{height: "100vh"}}>
+            <div className="card w-100">
                 <div className="card-body">
                     <div className="text-center">
                         <h3>SMS Setting</h3>
@@ -42,7 +42,7 @@ export const SmsSetting = (props) => {
                         </div>
                     </div>
                     <div>
-                        <button className="btn btn-secondary mr-2">Submit</button>
+                        <button className="btn btn-info mr-2">Submit</button>
                         <button className="btn btn-secondary" onClick={sendSMS}>Go to SMS Page</button>
                     </div>
                 </div>

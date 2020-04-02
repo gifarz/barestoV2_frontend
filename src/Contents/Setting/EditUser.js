@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import './style.css';
 
-export const AddUser = (props) => {
+export const EditUser = (props) => {
 
     useEffect(() => {
         window.$("#select_all").on("click", function() {
@@ -22,7 +22,7 @@ export const AddUser = (props) => {
       <div className="row">
             <div className="card w-100">
             <div className="card-body">
-                    <h5 className="card-title">Add User</h5>
+                    <h5 className="card-title">Edit User</h5>
                     <hr/>
                     <div className="form-row">
                         <div className="form-group col-md-6">

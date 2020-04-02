@@ -48,23 +48,23 @@ export const SendSMS = (props) => {
             </div>
         </div>
         <div className="row">
-            <div className="card w-100" style={{height: "100vh"}}>
+            <div className="card w-100">
                 <div className="card-body">
-                    <div className="text-center mt-5">
+                    <div className="text-center mt-2">
                         <h3>SMS Service</h3>
                         <h5>Please Choose Option Below</h5>
                     </div>
                     <hr/>
                     <div className="d-flex justify-content-center">
-                        <button className="btn btn-secondary mr-2" onClick={()=> window.open("https://www.textlocal.com/", "_blank")}>Sign Up In TextLocal </button>
-                        <button className="btn btn-secondary mr-2" onClick={configureSMS}> Configure SMS </button>
-                        <button className="btn btn-secondary mr-2" onClick={testSMS}>Send Test SMS </button>
-                        <button className="btn btn-secondary" onClick={checkBalance}> Check Balance </button>
+                        <button className="btn btn-info mr-2" onClick={()=> window.open("https://www.textlocal.com/", "_blank")}>Sign Up In TextLocal </button>
+                        <button className="btn btn-info mr-2" onClick={configureSMS}> Configure SMS </button>
+                        <button className="btn btn-info mr-2" onClick={testSMS}>Send Test SMS </button>
+                        <button className="btn btn-info" onClick={checkBalance}> Check Balance </button>
                     </div>
                     <div className="d-flex justify-content-center mt-2">
-                        <button className="btn btn-secondary mr-2" onClick={customerWhoBirthday}> SMS to Customer Who Has Birthday Today </button>
-                        <button className="btn btn-secondary mr-2" onClick={customerWhoAnniversary}> SMS to Customer Who Has Anniversary Today </button>
-                        <button className="btn btn-secondary" onClick={smsAllCustomer}> Send SMS to All Customer </button>
+                        <button className="btn btn-info mr-2" onClick={customerWhoBirthday}> SMS to Customer Who Has Birthday Today </button>
+                        <button className="btn btn-info mr-2" onClick={customerWhoAnniversary}> SMS to Customer Who Has Anniversary Today </button>
+                        <button className="btn btn-info" onClick={smsAllCustomer}> Send SMS to All Customer </button>
                     </div>
                 </div>
             </div>

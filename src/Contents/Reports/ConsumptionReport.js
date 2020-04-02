@@ -35,7 +35,7 @@ export const ConsumptionReport = (props) => {
                                     <input type="date" className="form-control"/>
                                 </div>
                                 <div className="form-group col-md-2">
-                                    <button className="btn btn-secondary">Submit</button>
+                                    <button className="btn btn-info">Submit</button>
                                 </div>
                             </div>
                         </div>

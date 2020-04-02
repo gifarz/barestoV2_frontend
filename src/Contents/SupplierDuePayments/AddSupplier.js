@@ -7,6 +7,8 @@ export const AddSupplier = (props) => {
       <div className="row">
             <div className="card w-100" style={{height: "100vh"}}>
                 <div className="card-body">
+                    <h5 className="card-title">Add Supplier</h5>
+                    <hr/>
                     <div className="form-row">
                         <div className="form-group col-md-6">
                             Date :<input type="date" className="form-control"/>
@@ -22,12 +24,14 @@ export const AddSupplier = (props) => {
                         </div>
                         <p>Note :</p>
                         <div className="form-group col-md-12">
-                            <textarea name="note" id="note" cols="35" rows="10"></textarea>
+                            <textarea name="note" id="note" rows="10" className="form-control"></textarea>
                         </div>
                     </div>
                     <div className="button-addwaste">
-                        <button className="btn btn-info mr-2">Submit</button>
-                        <button className="btn btn-secondary">Cancel</button>
+                        <button rel="1" type="submit" className="btn btn-success">
+                            <i className="fa fa-check" /> Save
+                        </button>
+                        <button className="btn btn-inverse" onClick={props.handleCancel}>Cancel</button>
                     </div>
                 </div>
             </div>

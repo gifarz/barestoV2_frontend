@@ -23,23 +23,23 @@ export const GeneralSetting = (props) => {
             </div>
         </div>
       <div className="row">
-            <div className="card w-100" style={{height: "100vh"}}>
+            <div className="card w-100" >
                 <div className="card-body">
                     <div className="form-row">
                         <div className="form-group col-md-4">
-                            Date Format :<input type="date" className="form-control"/>
+                            Date Format :<input type="date" id="date_format" name="date_format" className="form-control"/>
                         </div>
                         <div className="form-group col-md-4">
                             Country Time Zone
-                            <select name="user" id="user" className="form-control">
+                            <select name="country_time_zone" id="country_time_zone" className="form-control">
                                 <option value="user">Choose Time Zone</option>
                             </select>
                         </div>
                         <div className="form-group col-md-4">
-                            Currency :<input type="text" className="form-control"/>
+                            Currency :<input type="number" id="currency" name="currency" className="form-control"/>
                         </div>
                     </div>
-                    <button className="btn btn-secondary">Submit</button>
+                    <button className="btn btn-info">Submit</button>
                 </div>
             </div>
         </div>

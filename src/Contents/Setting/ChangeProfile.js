@@ -24,7 +24,7 @@ export const ChangeProfile = (props) => {
         </div>
 
         <div className="row">
-            <div className="card w-100" style={{height: "100vh"}}>
+            <div className="card w-100">
                 <div className="card-body">
                     <div className="form-row">
                         <div className="form-group col-md-4">

@@ -1,9 +1,38 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {AddUser} from './AddUser';
+import {EditUser} from './EditUser';
 
 export const ManageUsers = (props) => {
 
-    const [hidden, setHidden] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const [editMode, setEditMode] = useState(false);
+  const [addMode, setAddMode] = useState(false);
+
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "assets/dist/js/content.js";
+    script.async = true;
+
+    document.body.appendChild(script);
+  }, []);
+
+  const handleCancel = () => {
+    setHidden(false);
+    setEditMode(false);
+    setAddMode(false);
+  };
+
+  const handleEdit = () => {
+    setHidden(true);
+    setEditMode(true);
+    setAddMode(false);
+  };
+
+  const handleAdd = () => {
+    setHidden(true);
+    setEditMode(false);
+    setAddMode(true);
+  };
 
     const home = () => {
         props.history.push("/")
@@ -35,9 +64,7 @@ export const ManageUsers = (props) => {
                   type="button"
                   className="btn btn-info"
                   style={{ margin: "0px 10px 0px 10px" }}
-                  onClick={() => {
-                    hidden ? setHidden(false) : setHidden(true);
-                  }}
+                  onClick={handleAdd}
                 >
                   <i className="fa fa-plus"></i> Add User
                 </button>
@@ -82,6 +109,7 @@ export const ManageUsers = (props) => {
                             <a
                               className="dropdown-item"
                               href
+                              onClick={handleEdit}
                             >
                               <i className="ti-pencil"></i> Edit
                             </a>
@@ -103,8 +131,12 @@ export const ManageUsers = (props) => {
           </div>
         </div>
         {hidden ? (
-          <div id="addedit_ingredient_category" className="col-md-6">
-            <AddUser hidden={hidden}/>
+          <div className="col-md-6">
+            {editMode ?
+              <EditUser handleCancel={handleCancel}/>
+              :
+              <AddUser handleCancel={handleCancel}/>
+            }
           </div>
         ) : (
           ""
