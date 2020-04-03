@@ -29,7 +29,7 @@ export const CustomerWhoBirthday = (props) => {
         </div>
 
         <div className="row">
-            <div className="card w-100" style={{height: "100vh"}}>
+            <div className="card w-100">
                 <div className="card-body">
                     <div className="form-row">
                         <div className="form w-50">
@@ -48,7 +48,7 @@ export const CustomerWhoBirthday = (props) => {
                             <p>There are 0 customer has birthday today. </p>
                             <div>
                                 <button className="btn btn-info mr-2">Submit</button>
-                                <button className="btn btn-secondary" onClick={sendSMS}>Back</button>
+                                <button className="btn btn-inverse" onClick={sendSMS}>Back</button>
                             </div>
                         </div>
                     </div>

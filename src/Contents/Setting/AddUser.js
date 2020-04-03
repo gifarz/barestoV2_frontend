@@ -41,16 +41,16 @@ export const AddUser = (props) => {
                             Will Login ? :
                             <div>
                                 <div className="radio-user">
-                                    <label><input type="radio" name="radio" id="login_yes" defaultChecked/>Yes<span className="checkmark"></span></label>
+                                    <label><input type="radio" name="radio" id="login_yes" />Yes<span className="checkmark"></span></label>
                                 </div>
                                 <div className="radio-user">
-                                    <label><input type="radio" name="radio" id="login_no"/>No<span className="checkmark"></span></label>
+                                    <label><input type="radio" name="radio" id="login_no" defaultChecked/>No<span className="checkmark"></span></label>
                                 </div>
                             </div>
                         </div>
                     </div>
                     {/* <LoginYess checked/> */}
-                    <div id="check-radio-button">
+                    <div id="check-radio-button" style={{display: "none"}}>
                         <div id="form_input_user">
                             <div className="form-row">
                                 <div className="form-group col-md-6">

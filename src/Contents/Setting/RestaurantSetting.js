@@ -1,6 +1,18 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 export const RestaurantSetting = (props) => {
+
+    useEffect(() => {
+
+        window.$("#collect_yes").on('click',function() {
+            window.$("#radio-button-yes").fadeIn();
+        });
+        window.$("#collect_no").on('click',function() {
+            window.$("#radio-button-yes").fadeOut();
+          
+        });
+
+    }, []);
 
     const home = () => {
         props.history.push("/")
@@ -42,10 +54,10 @@ export const RestaurantSetting = (props) => {
                             I Collect Tax
                             <div>
                                 <div className="radio-user">
-                                    <label><input type="radio" name="radio" id="collect_yes"/>Yes<span className="checkmark"></span></label>
+                                    <label><input type="radio" name="collect_tax" id="collect_yes"/>Yes<span className="checkmark"></span></label>
                                 </div>
                                 <div className="radio-user">
-                                    <label><input type="radio" name="radio" id="collect_no"/>No<span className="checkmark"></span></label>
+                                    <label><input type="radio" name="collect_tax" id="collect_no" defaultChecked/>No<span className="checkmark"></span></label>
                                 </div>
                             </div>
                         </div>
@@ -53,10 +65,31 @@ export const RestaurantSetting = (props) => {
                             Pre or Post Payment
                             <div>
                                 <div className="radio-user">
-                                    <label><input type="radio" name="radio" id="prepost_yes"/>Yes<span className="checkmark"></span></label>
+                                    <label><input type="radio" name="prepost_payment" id="prepost_yes" defaultChecked/>Yes<span className="checkmark"></span></label>
                                 </div>
                                 <div className="radio-user">
-                                    <label><input type="radio" name="radio" id="prepost_no"/>No<span className="checkmark"></span></label>
+                                    <label><input type="radio" name="prepost_payment" id="prepost_no"/>No<span className="checkmark"></span></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="radio-button-yes" style={{display: "none"}}>
+                            <div className="form-row">
+                                <div className="form-group col-md-6">
+                                    My Tax Title :<input type="text" className="form-control"/>
+                                </div>
+                                <div className="form-group col-md-6">
+                                    My Tax Registration No. :<input type="text" className="form-control"/>
+                                </div>
+                                <div className="form-group col-md-6">
+                                    My Tax is GST
+                                    <div>
+                                        <div className="radio-user">
+                                            <label><input type="radio" name="tax_gst" id="tax_yes" />Yes<span className="checkmark"></span></label>
+                                        </div>
+                                        <div className="radio-user">
+                                            <label><input type="radio" name="tax_gst" id="tax_no" />No<span className="checkmark"></span></label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

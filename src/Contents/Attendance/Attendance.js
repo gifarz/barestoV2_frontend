@@ -1,8 +1,37 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {AddAttendance} from './AddAttendance';
+import {EditAttendance} from './EditAttendance';
 
 export const Attendance = (props) => {
-    const [hidden, setHidden] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const [editMode, setEditMode] = useState(false);
+  const [addMode, setAddMode] = useState(false);
+
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "assets/dist/js/content.js";
+    script.async = true;
+
+    document.body.appendChild(script);
+  }, []);
+
+  const handleCancel = () => {
+    setHidden(false);
+    setEditMode(false);
+    setAddMode(false);
+  };
+
+  const handleEdit = () => {
+    setHidden(true);
+    setEditMode(true);
+    setAddMode(false);
+  };
+
+  const handleAdd = () => {
+    setHidden(true);
+    setEditMode(false);
+    setAddMode(true);
+  };
 
     const home = () => {
         props.history.push("/")
@@ -34,9 +63,7 @@ export const Attendance = (props) => {
                   type="button"
                   class="btn btn-info"
                   style={{ margin: "0px 10px 0px 10px" }}
-                  onClick={() => {
-                    hidden ? setHidden(false) : setHidden(true);
-                  }}
+                  onClick={handleAdd}
                 >
                   <i class="fa fa-plus"></i> Add Attendance
                 </button>
@@ -81,6 +108,7 @@ export const Attendance = (props) => {
                             <a
                               className="dropdown-item"
                               href="javascript:void(0)"
+                              onClick={handleEdit}
                             >
                               <i class="ti-pencil"></i> Edit
                             </a>
@@ -102,8 +130,12 @@ export const Attendance = (props) => {
           </div>
         </div>
         {hidden ? (
-          <div id="addedit_ingredient_category" className="col-md-6">
-            <AddAttendance hidden={hidden}/>
+          <div className="col-md-6">
+            {editMode ? 
+            <EditAttendance handleCancel={handleCancel}/>
+            :
+            <AddAttendance handleCancel={handleCancel}/>
+            }
           </div>
         ) : (
           ""

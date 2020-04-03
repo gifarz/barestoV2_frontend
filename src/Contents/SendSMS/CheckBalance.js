@@ -33,7 +33,7 @@ export const CheckBalance = (props) => {
                 <div className="card-body">
                     <div className="form-row">
                         <h3>Your current textlocal sms credit balance is Connection is not properly established, please check in TextLocal to know how many sms you can send by this credit.</h3>
-                        <button className="btn btn-info mt-4" onClick={sendSMS}>Back</button>
+                        <button className="btn btn-inverse mt-4" onClick={sendSMS}>Back</button>
                     </div>
                 </div>
             </div>
