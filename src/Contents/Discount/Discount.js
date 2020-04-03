@@ -70,7 +70,7 @@ export const Discount = props => {
                   style={{ margin: "0px 10px 0px 10px" }}
                   onClick={handleAdd}
                 >
-                  <i class="fa fa-plus"></i> Add Ingredient Category
+                  <i class="fa fa-plus"></i> Add Discount
                 </button>
               </div>
               <br />
