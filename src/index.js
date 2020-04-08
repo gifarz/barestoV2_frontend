@@ -5,72 +5,72 @@ import * as serviceWorker from "./serviceWorker";
 import Header from "./Navs/Header";
 import Sidebar from "./Navs/Sidebar";
 import Footer from "./Navs/Footer";
-
-import { Dashboard } from './Contents/Dashboard/Dashboard';
-import { Sales } from './Contents/Sales/Sales';
-import { Discount } from './Contents/Discount/Discount';
-import { Purchase } from './Contents/Purchase/Purchase';
-import { Expense } from './Contents/Expense/Expense';
-import { Inventory } from './Contents/InventoryProduct/Inventory';
-import { InventoryAdjustment } from './Contents/InventoryProduct/InventoryAdjustment';
-import { Waste } from './Contents/Waste/Waste';
 import { SignIn } from './Contents/Auth/SignIn';
 import { SignUp } from './Contents/Auth/SignUp';
-import { SupplierDuePayments } from './Contents/SupplierDuePayments/SupplierDuePayments';
-import { CustomerDueReceive } from './Contents/CustomerDueReceive/CustomerDueReceive';
-import { Attendance } from './Contents/Attendance/Attendance';
+
+import { Dashboard } from './Contents/ADMIN/Dashboard/Dashboard';
+import { Sales } from './Contents/ADMIN/Sales/Sales';
+import { Discount } from './Contents/ADMIN/Discount/Discount';
+import { Purchase } from './Contents/ADMIN/Purchase/Purchase';
+import { Expense } from './Contents/ADMIN/Expense/Expense';
+import { Inventory } from './Contents/ADMIN/InventoryProduct/Inventory';
+import { InventoryAdjustment } from './Contents/ADMIN/InventoryProduct/InventoryAdjustment';
+import { Waste } from './Contents/ADMIN/Waste/Waste';
+import { SupplierDuePayments } from './Contents/ADMIN/SupplierDuePayments/SupplierDuePayments';
+import { CustomerDueReceive } from './Contents/ADMIN/CustomerDueReceive/CustomerDueReceive';
+import { Attendance } from './Contents/ADMIN/Attendance/Attendance';
 
 //SMS
-import { SendSMS } from './Contents/SendSMS/SendSMS';
-import { TestSMS } from './Contents/SendSMS/TestSMS';
-import { CheckBalance } from './Contents/SendSMS/CheckBalance';
-import { CustomerWhoAnniversary } from './Contents/SendSMS/CustomerWhoAnniversary';
-import { CustomerWhoBirthday } from './Contents/SendSMS/CustomerWhoBirthday';
-import { SmsAllCustomer } from './Contents/SendSMS/SmsAllCustomer';
+import { SendSMS } from './Contents/ADMIN/SendSMS/SendSMS';
+import { TestSMS } from './Contents/ADMIN/SendSMS/TestSMS';
+import { CheckBalance } from './Contents/ADMIN/SendSMS/CheckBalance';
+import { CustomerWhoAnniversary } from './Contents/ADMIN/SendSMS/CustomerWhoAnniversary';
+import { CustomerWhoBirthday } from './Contents/ADMIN/SendSMS/CustomerWhoBirthday';
+import { SmsAllCustomer } from './Contents/ADMIN/SendSMS/SmsAllCustomer';
 
 //Reports
-import { ConsumptionReport } from "./Contents/Reports/ConsumptionReport";
-import { CustomerDueReport } from "./Contents/Reports/CustomerDueReport";
-import { CustomerLedger } from "./Contents/Reports/CustomerLedger";
-import { DailySaleReport } from "./Contents/Reports/DailySaleReport";
-import { DetailedSaleReport } from "./Contents/Reports/DetailedSaleReport";
-import { ExpenseReport } from "./Contents/Reports/ExpenseReport";
-import { FoodSaleReport } from "./Contents/Reports/FoodSaleReport";
-import { InventoryReport } from "./Contents/Reports/InventoryReport";
-import { KitchenPerformanceReport } from "./Contents/Reports/KitchenPerformanceReport";
-import { LowInventoryReport } from "./Contents/Reports/LowInventoryReport";
-import { RegistryReport } from "./Contents/Reports/RegistryReport";
-import { SupplierDueReport } from "./Contents/Reports/SupplierDueReport";
-import { SupplierLedger } from "./Contents/Reports/SupplierLedger";
-import { WasteReport } from "./Contents/Reports/WasteReport";
-import { AttendanceReport } from "./Contents/Reports/AttendanceReport";
-import { DailySummaryReport } from "./Contents/Reports/DailySummaryReport";
-import { ProfitLossReport } from "./Contents/Reports/ProfitLossReport";
-import { PurchaseReport } from "./Contents/Reports/PurchaseReport";
-import { VatReport } from "./Contents/Reports/VatReport";
+import { ConsumptionReport } from "./Contents/ADMIN/Reports/ConsumptionReport";
+import { CustomerDueReport } from "./Contents/ADMIN/Reports/CustomerDueReport";
+import { CustomerLedger } from "./Contents/ADMIN/Reports/CustomerLedger";
+import { DailySaleReport } from "./Contents/ADMIN/Reports/DailySaleReport";
+import { DetailedSaleReport } from "./Contents/ADMIN/Reports/DetailedSaleReport";
+import { ExpenseReport } from "./Contents/ADMIN/Reports/ExpenseReport";
+import { FoodSaleReport } from "./Contents/ADMIN/Reports/FoodSaleReport";
+import { InventoryReport } from "./Contents/ADMIN/Reports/InventoryReport";
+import { KitchenPerformanceReport } from "./Contents/ADMIN/Reports/KitchenPerformanceReport";
+import { LowInventoryReport } from "./Contents/ADMIN/Reports/LowInventoryReport";
+import { RegistryReport } from "./Contents/ADMIN/Reports/RegistryReport";
+import { SupplierDueReport } from "./Contents/ADMIN/Reports/SupplierDueReport";
+import { SupplierLedger } from "./Contents/ADMIN/Reports/SupplierLedger";
+import { WasteReport } from "./Contents/ADMIN/Reports/WasteReport";
+import { AttendanceReport } from "./Contents/ADMIN/Reports/AttendanceReport";
+import { DailySummaryReport } from "./Contents/ADMIN/Reports/DailySummaryReport";
+import { ProfitLossReport } from "./Contents/ADMIN/Reports/ProfitLossReport";
+import { PurchaseReport } from "./Contents/ADMIN/Reports/PurchaseReport";
+import { VatReport } from "./Contents/ADMIN/Reports/VatReport";
 
 //Master
-import { FoodMenuCategories } from "./Contents/Master/FoodMenuCategories";
-import { IngredientCategories } from "./Contents/Master/IngredientCategories";
-import { Ingredients } from "./Contents/Master/Ingredients";
-import { IngredientUnits } from "./Contents/Master/IngredientUnits";
-import { PaymentMethods } from "./Contents/Master/PaymentMethods";
-import { Tables } from "./Contents/Master/Tables";
-import { Variant } from "./Contents/Master/Variant";
-import { Vat } from "./Contents/Master/Vat";
-import { Customer } from "./Contents/Master/Customer";
-import { ExpenseItems } from "./Contents/Master/ExpenseItems";
-import { FoodMenus } from "./Contents/Master/FoodMenus";
-import { Supplier } from "./Contents/Master/Supplier";
+import { FoodMenuCategories } from "./Contents/ADMIN/Master/FoodMenuCategories";
+import { IngredientCategories } from "./Contents/ADMIN/Master/IngredientCategories";
+import { Ingredients } from "./Contents/ADMIN/Master/Ingredients";
+import { IngredientUnits } from "./Contents/ADMIN/Master/IngredientUnits";
+import { PaymentMethods } from "./Contents/ADMIN/Master/PaymentMethods";
+import { Tables } from "./Contents/ADMIN/Master/Tables";
+import { Variant } from "./Contents/ADMIN/Master/Variant";
+import { Vat } from "./Contents/ADMIN/Master/Vat";
+import { Customer } from "./Contents/ADMIN/Master/Customer";
+import { ExpenseItems } from "./Contents/ADMIN/Master/ExpenseItems";
+import { FoodMenus } from "./Contents/ADMIN/Master/FoodMenus";
+import { Supplier } from "./Contents/ADMIN/Master/Supplier";
 
 //Setting
-import { ChangePassword } from "./Contents/Setting/ChangePassword";
-import { ChangeProfile } from "./Contents/Setting/ChangeProfile";
-import { Logout } from "./Contents/Setting/Logout";
-import { GeneralSetting } from "./Contents/Setting/GeneralSetting";
-import { ManageUsers } from "./Contents/Setting/ManageUsers";
-import { SmsSetting } from "./Contents/Setting/SmsSetting";
-import { RestaurantSetting } from "./Contents/Setting/RestaurantSetting";
+import { ChangePassword } from "./Contents/ADMIN/Setting/ChangePassword";
+import { ChangeProfile } from "./Contents/ADMIN/Setting/ChangeProfile";
+import { Logout } from "./Contents/ADMIN/Setting/Logout";
+import { GeneralSetting } from "./Contents/ADMIN/Setting/GeneralSetting";
+import { ManageUsers } from "./Contents/ADMIN/Setting/ManageUsers";
+import { SmsSetting } from "./Contents/ADMIN/Setting/SmsSetting";
+import { RestaurantSetting } from "./Contents/ADMIN/Setting/RestaurantSetting";
 
 const routing = (
   <Router>
